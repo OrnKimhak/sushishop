@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "492869429631",
+    "project_id": "flutter-with-firebase-8ebda",
+    "storage_bucket": "flutter-with-firebase-8ebda.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:492869429631:android:3ef7e0ed24c5ccde25124a",
+        "android_client_info": {
+          "package_name": "com.example.sushishop"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDX9mgFSlJPyNte6rLf-fmPn69DXNyeq88"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
