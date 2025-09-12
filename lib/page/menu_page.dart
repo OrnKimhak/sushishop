@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:sushishop/components/button.dart';
+import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
+// import 'package:sushishop/components/button.dart';
 import 'package:sushishop/components/search_component.dart';
+import 'package:sushishop/components/slideshow.dart';
 import 'package:sushishop/widget/color_path.dart';
 
 class MenuPage extends StatelessWidget {
@@ -12,9 +14,9 @@ class MenuPage extends StatelessWidget {
       backgroundColor: AppColorPath.white,
       //Appbar
       appBar: AppBar(
-        backgroundColor: AppColorPath.white,
+        backgroundColor: AppColorPath.red,
         elevation: 0,
-        leading: Icon(Icons.menu, color: AppColorPath.black),
+        leading: Icon(Icons.menu, color: AppColorPath.white),
         title: Center(
           child: Text(
             'Tokyo',
@@ -29,32 +31,48 @@ class MenuPage extends StatelessWidget {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          //promotion banner
-          Container(
-            decoration: BoxDecoration(
-              color: AppColorPath.red,
-              borderRadius: BorderRadius.circular(10),
-            ),
-            margin: EdgeInsets.symmetric(horizontal: 20),
-            padding: EdgeInsets.all(20),
-            child: Row(
+          SizedBox(height: 20,),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 25),
+            child: ImageSlideshow(
+              width: double.infinity,
+              height: 200,
+              initialPage: 0,
+              autoPlayInterval: 5000,
+              isLoop: true,
               children: [
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      'Get 32% Promotion',
-                      style: TextStyle(color: AppColorPath.white, fontSize: 20),
-                    ),
-                    SizedBox(height: 20),
-                    MyButton(text: 'Redeem', onTap: () {}),
-                  ],
+                Slideshow(
+                  h: 200,
+                  w: 200,
+                  bgcolor: AppColorPath.red,
+                  btntext: 'Redeem',
+                  text: 'Get 32% Promotion',
+                  image: Image.asset(
+                    'assets/images/sushibanner.png',
+                    fit: BoxFit.cover,
+                  ),
                 ),
-                //image sushi
-                Image.asset(
-                  'assets/images/sushibanner.png',
-                  height: 200,
-                  width: 200,
+                Slideshow(
+                  h: 200,
+                  w: 200,
+                  bgcolor: AppColorPath.blue.withAlpha(80),
+                  btntext: 'Redeem',
+                  text: 'Get 32% Promotion',
+                  image: Image.asset(
+                    'assets/images/slide3.1.png',
+                    // fit: BoxFit.cover,
+                  ),
+                ),
+                Slideshow(
+                  h: 200,
+                  w: 200,
+                  bgcolor: AppColorPath.grey,
+                  btntext: 'Redeem',
+                  text: 'Get 32% Promotion',
+                  image: Image.asset(
+                    'assets/images/sushibanner.png',
+                    fit: BoxFit.cover,
+                  ),
                 ),
               ],
             ),
@@ -82,7 +100,6 @@ class MenuPage extends StatelessWidget {
             ),
           ),
           SizedBox(height: 10),
-          
         ],
       ),
     );

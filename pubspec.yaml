@@ -33,6 +33,7 @@ dependencies:
   cloud_firestore: ^6.0.0
   firebase_auth: ^6.0.0
   firebase_core: ^4.0.0
+  flutter_image_slideshow: ^0.1.6
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -68,6 +69,7 @@ flutter:
     - assets/images/sushi1.jpg
     - assets/images/sushibanner.png
     - assets/images/backgroundsushi.jpg
+    - assets/images/
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
 

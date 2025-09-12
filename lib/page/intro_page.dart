@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:sushishop/components/button.dart';
 import 'package:sushishop/page/auth/login_page.dart';
+import 'package:sushishop/page/auth/signin_signup_widget.dart';
+import 'package:sushishop/page/menu_page.dart';
 import 'package:sushishop/widget/color_path.dart';
 
 class IntroPage extends StatelessWidget {
@@ -56,7 +58,7 @@ class IntroPage extends StatelessWidget {
                 //go to menu page
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => LoginPage()),
+                  MaterialPageRoute(builder: (context) => MenuPage()),
                 );
               },
             ),
