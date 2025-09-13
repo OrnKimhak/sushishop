@@ -6,4 +6,5 @@ class AppColorPath {
   static Color blue =  const Color.fromARGB(255, 14, 77, 128);
   static Color black = Colors.black;
   static Color grey = Colors.grey;
+  static Color orange = Colors.orange;
 }
