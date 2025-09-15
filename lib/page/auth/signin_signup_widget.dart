@@ -25,14 +25,14 @@ class SigninSignupWidget extends StatelessWidget {
       decoration: BoxDecoration(),
       child: TextField(
         decoration: InputDecoration(
-          hintText: hint,
+          hintText: hint,hintStyle: TextStyle(color: AppColorPath.black),
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(10),
-            borderSide: BorderSide(color: Colors.grey),
+            borderSide: BorderSide(color: Colors.white),
           ),
           prefixIcon: Icon(iconleft),
           suffixIcon: Icon(iconright),
-          label: Text(text, style: TextStyle()),
+          label: Text(text),
         ),obscureText: obsecureText??false,
       ),
     );

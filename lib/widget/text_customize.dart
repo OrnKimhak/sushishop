@@ -4,18 +4,19 @@ class TextCustomize extends StatelessWidget {
   final String text;
   final double size;
   final FontWeight? weight;
+  final Color? colors;
   const TextCustomize({
     super.key,
     required this.text,
     required this.size,
-    this.weight,
+    this.weight, this.colors,
   });
 
   @override
   Widget build(BuildContext context) {
     return Text(
       text,
-      style: TextStyle(fontSize: size, fontWeight: weight),
+      style: TextStyle(fontSize: size, fontWeight: weight,color:colors),
     );
   }
 }

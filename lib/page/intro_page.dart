@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sushishop/components/button.dart';
-import 'package:sushishop/page/auth/login_page.dart';
+import 'package:sushishop/page/auth/sign_in.dart';
 import 'package:sushishop/page/auth/signin_signup_widget.dart';
 import 'package:sushishop/page/menu_page.dart';
 import 'package:sushishop/widget/color_path.dart';

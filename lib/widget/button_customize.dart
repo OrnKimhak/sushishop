@@ -12,6 +12,7 @@ class ButtonCustomize extends StatelessWidget {
   final double height;
   final Color iconscolor;
   final String? images;
+  final VoidCallback? onClick;
   const ButtonCustomize({
     super.key,
     required this.iconscolor,
@@ -24,6 +25,7 @@ class ButtonCustomize extends StatelessWidget {
     required this.width,
     required this.height,
     this.images,
+    required this.onClick,
   });
 
   @override
@@ -34,8 +36,8 @@ class ButtonCustomize extends StatelessWidget {
         borderRadius: BorderRadius.circular(10),
         border: Border.all(color: AppColorPath.black.withAlpha(70)),
       ),
-      child: MaterialButton(
-        onPressed: onPressed(),
+      child: InkWell(
+        onTap: onClick,
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: width, vertical: height),
           child: Row(
@@ -43,7 +45,7 @@ class ButtonCustomize extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Icon(icons, color: iconscolor),
-              
+
               SizedBox(width: 10),
               Text(
                 text,
