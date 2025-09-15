@@ -6,30 +6,34 @@ class SigninSignupWidget extends StatelessWidget {
   final String hint;
   final IconData iconleft;
   final IconData? iconright;
+  final String text;
   TextEditingController? controller;
+  final bool? obsecureText;
   SigninSignupWidget({
     super.key,
     required this.hint,
     required this.iconleft,
+    required this.text,
     this.iconright,
-    required this.controller,
+    required this.controller, this.obsecureText,
   });
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 50,
-      decoration: BoxDecoration(
-        color: AppColorPath.white,
-        borderRadius: BorderRadius.circular(10),
-      ),
+      // margin: EdgeInsets.only(left: 20),
+      decoration: BoxDecoration(),
       child: TextField(
         decoration: InputDecoration(
-          border: InputBorder.none,
           hintText: hint,
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(10),
+            borderSide: BorderSide(color: Colors.grey),
+          ),
           prefixIcon: Icon(iconleft),
           suffixIcon: Icon(iconright),
-        ),
+          label: Text(text, style: TextStyle()),
+        ),obscureText: obsecureText??false,
       ),
     );
   }
