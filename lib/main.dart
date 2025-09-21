@@ -1,12 +1,17 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:sushishop/firebase_options.dart';
 import 'package:sushishop/page/auth/sign_in.dart';
+import 'package:sushishop/page/auth/sign_up.dart';
 import 'package:sushishop/page/intro_page.dart';
+import 'package:sushishop/page/menu_page.dart';
 
 void main() {
   runApp(MyApp());
   WidgetsFlutterBinding.ensureInitialized();
-  Firebase.initializeApp();
+  Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -14,6 +19,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: SignInPage());
+    return MaterialApp(
+      // home: SignInPage(),
+      // home: SignUpPage(),
+      home: MenuPage(),
+      );
   }
 }
