@@ -28,22 +28,25 @@ class _ItemListButtonState extends State<ItemListButton> {
         itemBuilder: (context, index) {
           return Padding(
             padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 10),
-            child: ElevatedButton(
-              onPressed: () {
-                onTapSelected(index);
-              },
-              style: ElevatedButton.styleFrom(
-                backgroundColor: _selectedIndex == index
-                    ? AppColorPath.orange
-                    : AppColorPath.white,
-              ),
-              child: Text(
-                "${itemlist[index]['name']}",
-                style: TextStyle(
-                  fontSize: 16,
-                  color: _selectedIndex == index
-                      ? AppColorPath.white
-                      : AppColorPath.black,
+            child: SizedBox(
+              // width: 200,
+              child: ElevatedButton(
+                onPressed: () {
+                  onTapSelected(index);
+                },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: _selectedIndex == index
+                      ? AppColorPath.orange
+                      : AppColorPath.white,
+                ),
+                child: Text(
+                  "${itemlist[index]['name']}",
+                  style: TextStyle(
+                    fontSize: 16,
+                    color: _selectedIndex == index
+                        ? AppColorPath.white
+                        : AppColorPath.black,
+                  ),
                 ),
               ),
             ),

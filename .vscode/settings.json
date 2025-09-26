@@ -6,5 +6,6 @@
     "iconleft",
     "imagepic",
     "sushishop"
-  ]
+  ],
+  "cmake.sourceDirectory": "D:/sushishop/sushishop/linux"
 }

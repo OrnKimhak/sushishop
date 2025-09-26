@@ -13,7 +13,7 @@ class SearchComponent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: MediaQuery.of( context).size.width* 0.80,
+      width: MediaQuery.of(context).size.width*0.7,
       child: TextField(
         decoration: InputDecoration(
           prefixIcon: Icon(iconleft),
