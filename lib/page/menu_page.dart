@@ -9,9 +9,15 @@ import 'package:sushishop/widget/bottomnavigationbar_screen.dart';
 import 'package:sushishop/widget/color_path.dart';
 import 'package:sushishop/widget/item_list_button.dart';
 
-class MenuPage extends StatelessWidget {
+class MenuPage extends StatefulWidget {
   const MenuPage({super.key});
 
+  @override
+  State<MenuPage> createState() => _MenuPageState();
+}
+
+class _MenuPageState extends State<MenuPage> {
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -74,7 +80,7 @@ class MenuPage extends StatelessWidget {
                     ),
                     SizedBox(height: 20),
                     // Search bar
-                    // Slide show advertisement
+////***********************************************************// Slide show advertisement
                     ImageSlideshow(
                       width: double.infinity,
                       height: 150,
@@ -145,7 +151,7 @@ class MenuPage extends StatelessWidget {
                         ],
                       ),
                     ),
-                    // Food Menu
+ //***********************************************************************************Food Menu
                     Container(
                       height: 450,
                       child: GridView.builder(
@@ -190,7 +196,7 @@ class MenuPage extends StatelessWidget {
                                   ),
                                 ],
                               ),
-                              //image of food
+  //  ********************************************************************* image of food                            //image of food
                               child: Column(
                                 children: [
                                   ClipRRect(
@@ -264,7 +270,7 @@ class MenuPage extends StatelessWidget {
                                       ],
                                     ),
                                   ),
-                                  // rate and add to cart
+  //  ********************************************************************* rate and add to cart
                                   Padding(
                                     padding: const EdgeInsets.symmetric(
                                       horizontal: 10,
@@ -316,7 +322,7 @@ class MenuPage extends StatelessWidget {
                     ),
                   ],
                 ),
-              ), //Slide show advertisement
+              ),//Slide show advertisement
             ],
           ),
         ),

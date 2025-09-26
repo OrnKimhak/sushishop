@@ -41,30 +41,43 @@ class _DetailScreenState extends State<DetailScreen> {
               fit: BoxFit.cover,
             ),
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Row(
-                children: [
-                  IconButton(
-                    onPressed: () {
-                      Navigator.pop(context);
-                    },
-                    icon: Icon(Icons.arrow_back_ios_new,color: AppColorPath.white,),
-                  ),
-                  Text(
-                    widget.title,
-                    maxLines: 1,
-                    style: TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.bold,
-                      color: AppColorPath.white,
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 10),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Row(
+                  children: [
+                    IconButton(
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                      icon: Icon(
+                        Icons.arrow_back_ios_new,
+                        color: AppColorPath.white,
+                      ),
                     ),
+                    Text(
+                      widget.title,
+                      maxLines: 1,
+                      style: TextStyle(
+                        fontSize: 24,
+                        fontWeight: FontWeight.bold,
+                        color: AppColorPath.white,
+                      ),
+                    ),
+                  ],
+                ),
+                IconButton(
+                  onPressed: () {},
+                  icon: Icon(
+                    Icons.shopping_cart_outlined,
+                    color: AppColorPath.white,
+                    size: 24,
                   ),
-                ],
-              ),
-              IconButton(onPressed: (){}, icon: Icon(Icons.shopping_cart_outlined,color: AppColorPath.white,size: 24,))
-            ],
+                ),
+              ],
+            ),
           ),
 
           // ImageSlideshow(
@@ -81,6 +94,38 @@ class _DetailScreenState extends State<DetailScreen> {
           //     );
           //   }),
           // ),
+ElevatedButton(onPressed: (){
+  showModalBottomSheet(context: context, builder: (context){
+    return Container(
+      // color: AppColorPath.red,
+      decoration: BoxDecoration(
+        color: AppColorPath.bleu,
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(20),
+          topRight: Radius.circular(20),
+        )
+      ),
+      height: 300,
+      width: double.infinity,
+      child: Column(
+        children: [
+          Text("Description",style: TextStyle(fontSize: 24,fontWeight: FontWeight.bold),),
+          SizedBox(height: 20,),
+          Text(widget.des,style: TextStyle(fontSize: 16),textAlign: TextAlign.center,),
+          SizedBox(height: 20,),
+          Text("Price: ${widget.price}",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
+          SizedBox(height: 10,),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [IconButton(onPressed: (){}, icon: Icon(Icons.star,color: AppColorPath.orange,)),
+              Text("Rating: ${widget.rate}",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
+            ],
+          ),
+        ],
+      ),
+    );
+  });
+}, child: Text("click me"))
         ],
       ),
     );

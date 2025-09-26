@@ -11,6 +11,7 @@ class BottomnavigationbarScreen extends StatefulWidget {
 
 class _BottomnavigationbarScreenState extends State<BottomnavigationbarScreen> {
   int _selectedIndex = 0;
+  
   void onTap(int index) {
     setState(() {
       _selectedIndex = index;
